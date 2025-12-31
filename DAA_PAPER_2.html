@@ -1,0 +1,4069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAA PAPER 2</title>
+    <style>
+        /* ============================================================================
+           ELEGANT PROFESSIONAL CSS FOR QUESTION PAPER CONVERTER
+           Refined themes: Elegant, Academic, Professional, Minimal, Dark, Print
+           With sophisticated color schemes and typography
+           ============================================================================ */
+        
+        /* ============================================================================
+   ELEGANT PROFESSIONAL CSS FOR QUESTION PAPER CONVERTER
+   Refined themes: Elegant, Academic, Professional, Minimal, Dark, Print
+   With sophisticated color schemes and typography
+   ============================================================================ */
+
+/* ============================================================================
+   BASE STYLES & CSS VARIABLES
+   ============================================================================ */
+
+:root {
+    /* Elegant Color System */
+    --primary-50: #f0f7ff;
+    --primary-100: #e0efff;
+    --primary-200: #bae0ff;
+    --primary-300: #7cc4ff;
+    --primary-400: #36a5ff;
+    --primary-500: #0088ff;
+    --primary-600: #006ad4;
+    --primary-700: #0052a6;
+    --primary-800: #003f7d;
+    --primary-900: #002a54;
+    
+    --secondary-50: #f8fafc;
+    --secondary-100: #f1f5f9;
+    --secondary-200: #e2e8f0;
+    --secondary-300: #cbd5e1;
+    --secondary-400: #94a3b8;
+    --secondary-500: #64748b;
+    --secondary-600: #475569;
+    --secondary-700: #334155;
+    --secondary-800: #1e293b;
+    --secondary-900: #0f172a;
+    
+    --accent-50: #fdf4ff;
+    --accent-100: #fae8ff;
+    --accent-200: #f5d0fe;
+    --accent-300: #f0abfc;
+    --accent-400: #e879f9;
+    --accent-500: #d946ef;
+    --accent-600: #c026d3;
+    --accent-700: #a21caf;
+    --accent-800: #86198f;
+    --accent-900: #701a75;
+    
+    --success-50: #f0fdf4;
+    --success-100: #dcfce7;
+    --success-200: #bbf7d0;
+    --success-300: #86efac;
+    --success-400: #4ade80;
+    --success-500: #22c55e;
+    --success-600: #16a34a;
+    --success-700: #15803d;
+    --success-800: #166534;
+    --success-900: #14532d;
+    
+    --warning-50: #fffbeb;
+    --warning-100: #fef3c7;
+    --warning-200: #fde68a;
+    --warning-300: #fcd34d;
+    --warning-400: #fbbf24;
+    --warning-500: #f59e0b;
+    --warning-600: #d97706;
+    --warning-700: #b45309;
+    --warning-800: #92400e;
+    --warning-900: #78350f;
+    
+    --danger-50: #fef2f2;
+    --danger-100: #fee2e2;
+    --danger-200: #fecaca;
+    --danger-300: #fca5a5;
+    --danger-400: #f87171;
+    --danger-500: #ef4444;
+    --danger-600: #dc2626;
+    --danger-700: #b91c1c;
+    --danger-800: #991b1b;
+    --danger-900: #7f1d1d;
+    
+    /* Neutral Grays */
+    --gray-50: #fafafa;
+    --gray-100: #f5f5f5;
+    --gray-200: #e5e5e5;
+    --gray-300: #d4d4d4;
+    --gray-400: #a3a3a3;
+    --gray-500: #737373;
+    --gray-600: #525252;
+    --gray-700: #404040;
+    --gray-800: #262626;
+    --gray-900: #171717;
+    
+    /* Theme Variables */
+    --bg-primary: white;
+    --bg-secondary: var(--gray-50);
+    --bg-tertiary: var(--gray-100);
+    --text-primary: var(--gray-900);
+    --text-secondary: var(--gray-600);
+    --text-tertiary: var(--gray-500);
+    --border-color: var(--gray-200);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+    --radius-sm: 0.25rem;
+    --radius: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
+    --radius-full: 9999px;
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Spacing */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
+    --space-24: 6rem;
+    --space-32: 8rem;
+    
+    /* Typography */
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Source Serif Pro', Georgia, 'Times New Roman', Times, serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
+    --text-5xl: 3rem;
+    --text-6xl: 3.75rem;
+    --text-7xl: 4.5rem;
+    --text-8xl: 6rem;
+    --text-9xl: 8rem;
+}
+
+/* ============================================================================
+   ELEGANT THEME (Default)
+   ============================================================================ */
+
+.theme-elegant {
+    --theme-bg: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-800) 100%);
+    --theme-bg-light: linear-gradient(135deg, var(--gray-50) 0%, white 100%);
+    --theme-primary: var(--primary-600);
+    --theme-secondary: var(--secondary-600);
+    --theme-accent: var(--accent-500);
+    --theme-success: var(--success-600);
+    --theme-text: var(--gray-800);
+    --theme-border: var(--gray-200);
+    --theme-card-bg: white;
+    --theme-card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* ============================================================================
+   ACADEMIC THEME
+   ============================================================================ */
+
+.theme-academic {
+    --theme-bg: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    --theme-bg-light: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    --theme-primary: #1e40af;
+    --theme-secondary: #475569;
+    --theme-accent: #dc2626;
+    --theme-success: #059669;
+    --theme-text: #1e293b;
+    --theme-border: #cbd5e1;
+    --theme-card-bg: white;
+    --theme-card-shadow: 0 4px 6px -1px rgba(30, 64, 175, 0.1);
+}
+
+/* ============================================================================
+   PROFESSIONAL THEME
+   ============================================================================ */
+
+.theme-professional {
+    --theme-bg: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    --theme-bg-light: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    --theme-primary: #0f172a;
+    --theme-secondary: #475569;
+    --theme-accent: #7c3aed;
+    --theme-success: #059669;
+    --theme-text: #0f172a;
+    --theme-border: #e2e8f0;
+    --theme-card-bg: white;
+    --theme-card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================================================
+   MINIMAL THEME
+   ============================================================================ */
+
+.theme-minimal {
+    --theme-bg: white;
+    --theme-bg-light: white;
+    --theme-primary: #262626;
+    --theme-secondary: #525252;
+    --theme-accent: #525252;
+    --theme-success: #262626;
+    --theme-text: #171717;
+    --theme-border: #e5e5e5;
+    --theme-card-bg: white;
+    --theme-card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================================================
+   DARK THEME
+   ============================================================================ */
+
+.theme-dark {
+    --theme-bg: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    --theme-bg-light: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    --theme-primary: #60a5fa;
+    --theme-secondary: #94a3b8;
+    --theme-accent: #c084fc;
+    --theme-success: #34d399;
+    --theme-text: #f1f5f9;
+    --theme-border: #334155;
+    --theme-card-bg: rgba(30, 41, 59, 0.9);
+    --theme-card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================================================
+   PRINT THEME
+   ============================================================================ */
+
+.theme-print {
+    --theme-bg: white;
+    --theme-bg-light: white;
+    --theme-primary: #000000;
+    --theme-secondary: #333333;
+    --theme-accent: #666666;
+    --theme-success: #000000;
+    --theme-text: #000000;
+    --theme-border: #cccccc;
+    --theme-card-bg: white;
+    --theme-card-shadow: none;
+}
+
+/* ============================================================================
+   RESET & BASE STYLES
+   ============================================================================ */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    color: var(--text-primary);
+    background: var(--theme-bg-light);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* ============================================================================
+   CONTAINER & LAYOUT
+   ============================================================================ */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-6);
+    width: 100%;
+}
+
+.content-wrapper {
+    min-height: 100vh;
+    position: relative;
+}
+
+.content {
+    padding-bottom: var(--space-20);
+}
+
+/* ============================================================================
+   HEADER STYLES
+   ============================================================================ */
+
+.header {
+    background: var(--theme-bg);
+    color: white;
+    padding: var(--space-12) 0 var(--space-8);
+    position: relative;
+    margin-bottom: var(--space-12);
+    border-radius: 0 0 var(--radius-2xl) var(--radius-2xl);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-6);
+    position: relative;
+    z-index: 2;
+}
+
+.title-container {
+    text-align: center;
+    margin-bottom: var(--space-8);
+}
+
+.title {
+    font-family: var(--font-serif);
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--space-4);
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    margin-top: var(--space-4);
+}
+
+.decoration-line {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+}
+
+.decoration-dot {
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.header-meta {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-6);
+    margin-bottom: var(--space-8);
+    flex-wrap: wrap;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    background: rgba(255, 255, 255, 0.1);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all var(--transition-fast);
+}
+
+.meta-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-1px);
+}
+
+.meta-item i {
+    font-size: var(--text-base);
+}
+
+.header-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--space-8);
+    flex-wrap: wrap;
+    gap: var(--space-4);
+}
+
+.action-group {
+    display: flex;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+}
+
+.theme-selector {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    background: rgba(255, 255, 255, 0.1);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.theme-select {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: var(--space-1);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+    cursor: pointer;
+    min-width: 120px;
+}
+
+.theme-select option {
+    background: var(--gray-800);
+    color: white;
+}
+
+.theme-select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+.header-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-300), white);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/* ============================================================================
+   BUTTONS
+   ============================================================================ */
+
+.action-btn {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-size: var(--text-sm);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    transition: all var(--transition-fast);
+    backdrop-filter: blur(10px);
+    white-space: nowrap;
+}
+
+.action-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.action-btn:active {
+    transform: translateY(0);
+}
+
+.action-btn i {
+    font-size: var(--text-base);
+}
+
+.toggle-answer {
+    background: rgba(34, 197, 94, 0.2);
+    border-color: rgba(34, 197, 94, 0.4);
+}
+
+.toggle-answer:hover {
+    background: rgba(34, 197, 94, 0.3);
+}
+
+.toggle-answer.active {
+    background: rgba(245, 158, 11, 0.2);
+    border-color: rgba(245, 158, 11, 0.4);
+}
+
+.bookmark-btn {
+    background: rgba(107, 114, 128, 0.2);
+    border-color: rgba(107, 114, 128, 0.4);
+}
+
+.bookmark-btn:hover {
+    background: rgba(107, 114, 128, 0.3);
+}
+
+.bookmark-btn.bookmarked {
+    background: rgba(245, 158, 11, 0.2);
+    border-color: rgba(245, 158, 11, 0.4);
+}
+
+/* ============================================================================
+   SUMMARY SECTION
+   ============================================================================ */
+
+.summary-section {
+    margin-bottom: var(--space-12);
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space-6);
+}
+
+.summary-card {
+    background: var(--theme-card-bg);
+    border: 1px solid var(--theme-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    box-shadow: var(--theme-card-shadow);
+    transition: all var(--transition);
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.summary-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--theme-primary);
+}
+
+.summary-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--theme-primary), var(--theme-secondary));
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: var(--text-xl);
+}
+
+.summary-content h3 {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: var(--theme-text);
+    line-height: 1;
+    margin-bottom: var(--space-1);
+}
+
+.summary-content p {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* ============================================================================
+   PART SECTIONS
+   ============================================================================ */
+
+.part-section {
+    background: var(--theme-card-bg);
+    border: 1px solid var(--theme-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    margin-bottom: var(--space-12);
+    position: relative;
+    box-shadow: var(--theme-card-shadow);
+    transition: all var(--transition);
+    overflow: hidden;
+}
+
+.part-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--theme-primary), var(--theme-secondary));
+}
+
+.part-section:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+.part-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-4);
+    border-bottom: 1px solid var(--theme-border);
+    position: relative;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+}
+
+.part-title {
+    font-family: var(--font-serif);
+    font-size: var(--text-2xl);
+    font-weight: 600;
+    color: var(--theme-primary);
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.part-icon {
+    color: var(--theme-primary);
+    font-size: var(--text-lg);
+}
+
+.part-subtitle {
+    display: flex;
+    gap: var(--space-6);
+    margin-top: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+}
+
+.question-count, .total-marks {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+/* ============================================================================
+   MARKS BADGES
+   ============================================================================ */
+
+.marks-badge {
+    background: linear-gradient(135deg, var(--theme-primary), var(--theme-secondary));
+    color: white;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    box-shadow: var(--shadow-sm);
+}
+
+.marks-badge-lg {
+    background: linear-gradient(135deg, var(--theme-primary), var(--theme-secondary));
+    color: white;
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    box-shadow: var(--shadow);
+}
+
+.marks-badge i,
+.marks-badge-lg i {
+    font-size: var(--text-xs);
+}
+
+/* ============================================================================
+   PART DESCRIPTION
+   ============================================================================ */
+
+.part-description {
+    background: linear-gradient(135deg, rgba(0, 136, 255, 0.03), rgba(100, 116, 139, 0.03));
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-6);
+    border-left: 3px solid var(--theme-primary);
+}
+
+.description-content {
+    display: flex;
+    padding: var(--space-4);
+    gap: var(--space-3);
+}
+
+.description-icon {
+    color: var(--theme-primary);
+    font-size: var(--text-lg);
+    margin-top: var(--space-1);
+    flex-shrink: 0;
+}
+
+.description-text p {
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ============================================================================
+   QUESTIONS CONTAINER
+   ============================================================================ */
+
+.questions-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+/* ============================================================================
+   QUESTION CARD
+   ============================================================================ */
+
+.question {
+    background: var(--theme-card-bg);
+    border: 1px solid var(--theme-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    transition: all var(--transition);
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.question:hover {
+    box-shadow: var(--shadow-lg);
+    border-color: var(--theme-primary);
+}
+
+.question.has-answer {
+    border-left: 3px solid var(--success-500);
+}
+
+.question.no-answer {
+    border-left: 3px solid var(--danger-500);
+}
+
+.question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-4);
+    border-bottom: 1px solid var(--theme-border);
+    flex-wrap: wrap;
+    gap: var(--space-4);
+}
+
+.question-number-container {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+}
+
+.question-number {
+    background: linear-gradient(135deg, var(--theme-primary), var(--theme-secondary));
+    color: white;
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius);
+    font-size: var(--text-lg);
+    font-weight: 600;
+    min-width: 60px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    box-shadow: var(--shadow);
+}
+
+.question-status i {
+    font-size: var(--text-sm);
+}
+
+.question-marks {
+    background: linear-gradient(135deg, var(--success-500), var(--success-600));
+    color: white;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    box-shadow: var(--shadow-sm);
+}
+
+.question-actions {
+    display: flex;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+}
+
+/* ============================================================================
+   QUESTION BODY
+   ============================================================================ */
+
+.question-body {
+    position: relative;
+}
+
+.question-text {
+    font-size: var(--text-base);
+    line-height: 1.7;
+    color: var(--theme-text);
+    margin-bottom: var(--space-6);
+}
+
+/* ============================================================================
+   TEXT LINES AND INDENTATION
+   ============================================================================ */
+
+.text-line {
+    margin-bottom: var(--space-3);
+    padding-left: var(--space-2);
+    position: relative;
+    transition: padding-left var(--transition-fast);
+}
+
+.text-line:hover {
+    padding-left: var(--space-3);
+}
+
+.text-line.numbered {
+    display: flex;
+    gap: var(--space-3);
+}
+
+.text-line.bullet {
+    display: flex;
+    gap: var(--space-3);
+}
+
+.list-number {
+    font-weight: 600;
+    color: var(--theme-primary);
+    min-width: 24px;
+}
+
+.bullet-point {
+    color: var(--theme-secondary);
+    font-weight: bold;
+    min-width: 24px;
+}
+
+.list-content {
+    flex: 1;
+}
+
+.empty-line {
+    height: var(--space-3);
+}
+
+/* ============================================================================
+   ANSWER CONTAINER
+   ============================================================================ */
+
+.answer-container {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.03), rgba(21, 128, 61, 0.03));
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(34, 197, 94, 0.1);
+    overflow: hidden;
+}
+
+.answer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-3) var(--space-4);
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.05), rgba(21, 128, 61, 0.05));
+    border-bottom: 1px solid rgba(34, 197, 94, 0.1);
+}
+
+.answer-label {
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: var(--success-600);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.answer-label i {
+    font-size: var(--text-lg);
+}
+
+.answer-actions {
+    display: flex;
+    gap: var(--space-1);
+}
+
+.copy-answer {
+    background: transparent;
+    border: none;
+    color: var(--success-600);
+    cursor: pointer;
+    padding: var(--space-1);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copy-answer:hover {
+    background: rgba(34, 197, 94, 0.1);
+    color: var(--success-700);
+}
+
+.copy-answer.copied {
+    background: var(--success-100);
+    color: var(--success-700);
+}
+
+.answer-content {
+    padding: var(--space-4);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.answer-expanded {
+    max-height: none;
+    opacity: 1;
+}
+
+.answer-line {
+    margin-bottom: var(--space-3);
+    padding-left: var(--space-4);
+    position: relative;
+    line-height: 1.6;
+}
+
+.answer-line::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--success-500);
+    font-weight: bold;
+}
+
+.answer-line.numbered {
+    padding-left: var(--space-6);
+}
+
+.answer-line.numbered::before {
+    content: attr(data-number);
+}
+
+.answer-line.bullet {
+    padding-left: var(--space-6);
+}
+
+.answer-line.bullet::before {
+    content: '•';
+    font-size: var(--text-lg);
+    line-height: 1;
+}
+
+.no-answer {
+    font-style: italic;
+    color: var(--text-secondary);
+    text-align: center;
+    padding: var(--space-6);
+    background: rgba(239, 68, 68, 0.03);
+    border-radius: var(--radius);
+    border: 1px dashed rgba(239, 68, 68, 0.2);
+}
+
+/* ============================================================================
+   INDENTATION LEVELS
+   ============================================================================ */
+
+.indent-1 {
+    padding-left: var(--space-8);
+    margin-left: var(--space-2);
+    border-left: 1px solid rgba(0, 136, 255, 0.1);
+}
+
+.indent-2 {
+    padding-left: var(--space-12);
+    margin-left: var(--space-3);
+    border-left: 1px solid rgba(0, 136, 255, 0.2);
+}
+
+.indent-3 {
+    padding-left: var(--space-16);
+    margin-left: var(--space-4);
+    border-left: 1px solid rgba(0, 136, 255, 0.3);
+}
+
+.indent-4 {
+    padding-left: var(--space-20);
+    margin-left: var(--space-5);
+    border-left: 1px solid rgba(0, 136, 255, 0.4);
+}
+
+/* ============================================================================
+   FOOTER
+   ============================================================================ */
+
+.footer {
+    background: linear-gradient(135deg, var(--gray-900), var(--gray-800));
+    color: var(--gray-300);
+    padding: var(--space-12) 0;
+    margin-top: var(--space-20);
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-6);
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-8);
+    flex-wrap: wrap;
+    gap: var(--space-6);
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.footer-brand i {
+    font-size: var(--text-2xl);
+    color: var(--primary-400);
+}
+
+.brand-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.brand-name {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: white;
+}
+
+.version {
+    font-size: var(--text-xs);
+    color: var(--gray-400);
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.generated-info, .document-info {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--gray-400);
+}
+
+.footer-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+}
+
+.footer-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-size: var(--text-sm);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    transition: all var(--transition-fast);
+    backdrop-filter: blur(10px);
+}
+
+.footer-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+/* ============================================================================
+   MODAL STYLES
+   ============================================================================ */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-4);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background: var(--theme-card-bg);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    max-width: 600px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--theme-border);
+    animation: modal-appear 0.3s ease-out;
+}
+
+@keyframes modal-appear {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-4);
+    border-bottom: 1px solid var(--theme-border);
+}
+
+.modal-header h3 {
+    font-size: var(--text-xl);
+    color: var(--theme-text);
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.close-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: var(--text-2xl);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius);
+    transition: all var(--transition-fast);
+}
+
+.close-btn:hover {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--danger-500);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+}
+
+.stat-card {
+    background: linear-gradient(135deg, rgba(0, 136, 255, 0.05), rgba(100, 116, 139, 0.05));
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    border: 1px solid var(--theme-border);
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    transition: all var(--transition);
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.stat-icon {
+    font-size: var(--text-2xl);
+    color: var(--theme-primary);
+    background: linear-gradient(135deg, var(--theme-primary), var(--theme-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 136, 255, 0.1);
+    border-radius: var(--radius);
+}
+
+.stat-content h4 {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: var(--theme-text);
+    line-height: 1;
+    margin-bottom: var(--space-1);
+}
+
+.stat-content p {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* ============================================================================
+   MOBILE SPECIFIC STYLES
+   ============================================================================ */
+
+/* Floating Action Button */
+.fab-container {
+    position: fixed;
+    bottom: var(--space-6);
+    right: var(--space-6);
+    z-index: 1000;
+    display: none;
+}
+
+.fab {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--theme-primary), var(--theme-secondary));
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-xl);
+    box-shadow: var(--shadow-xl);
+    transition: all var(--transition);
+    position: relative;
+    z-index: 1002;
+}
+
+.fab:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-xl);
+}
+
+.fab.active {
+    transform: rotate(45deg);
+}
+
+.fab-menu {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all var(--transition);
+}
+
+.fab-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.fab-action {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid var(--theme-border);
+    color: var(--theme-text);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-lg);
+    box-shadow: var(--shadow);
+    transition: all var(--transition);
+}
+
+.fab-action:hover {
+    background: var(--theme-primary);
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Mobile Modal */
+.mobile-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10001;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-4);
+    backdrop-filter: blur(4px);
+}
+
+.mobile-modal-content {
+    background: var(--theme-card-bg);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    max-width: 400px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--theme-border);
+    animation: modal-appear 0.3s ease-out;
+}
+
+.mobile-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-4);
+    border-bottom: 1px solid var(--theme-border);
+}
+
+.mobile-modal-header h3 {
+    font-size: var(--text-lg);
+    color: var(--theme-text);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.mobile-modal-close {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: var(--text-2xl);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius);
+    transition: all var(--transition-fast);
+}
+
+.mobile-modal-close:hover {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--danger-500);
+}
+
+.mobile-theme-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+}
+
+.mobile-theme-option {
+    background: transparent;
+    border: 1px solid var(--theme-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.mobile-theme-option:hover {
+    background: var(--gray-50);
+    border-color: var(--theme-primary);
+    transform: translateY(-2px);
+}
+
+.theme-preview {
+    width: 100%;
+    height: 60px;
+    border-radius: var(--radius);
+    margin-bottom: var(--space-2);
+}
+
+.theme-preview.elegant {
+    background: linear-gradient(135deg, var(--primary-600), var(--primary-800));
+}
+
+.theme-preview.academic {
+    background: linear-gradient(135deg, #1e3a8a, #1e40af);
+}
+
+.theme-preview.professional {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+.theme-preview.minimal {
+    background: linear-gradient(135deg, #ffffff, #f8fafc);
+    border: 1px solid var(--gray-300);
+}
+
+.theme-preview.dark {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+}
+
+.theme-preview.print {
+    background: linear-gradient(135deg, #ffffff, #f8fafc);
+    border: 1px solid var(--gray-300);
+    position: relative;
+}
+
+.theme-preview.print::after {
+    content: '🖨️';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: var(--text-xl);
+}
+
+/* ============================================================================
+   UTILITY CLASSES
+   ============================================================================ */
+
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-500);
+    color: white;
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius);
+    text-decoration: none;
+    z-index: 9999;
+}
+
+.skip-to-content:focus {
+    top: var(--space-2);
+}
+
+/* ============================================================================
+   RESPONSIVE DESIGN
+   ============================================================================ */
+
+/* Tablet and below */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 var(--space-4);
+    }
+    
+    .header {
+        padding: var(--space-8) 0;
+        border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+    }
+    
+    .title {
+        font-size: var(--text-3xl);
+    }
+    
+    .header-meta {
+        gap: var(--space-4);
+    }
+    
+    .part-section {
+        padding: var(--space-6);
+    }
+    
+    .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    :root {
+        --space-6: 1rem;
+        --space-8: 1.5rem;
+        --space-12: 2rem;
+        --space-20: 3rem;
+    }
+    
+    .container {
+        padding: 0 var(--space-4);
+    }
+    
+    .header {
+        padding: var(--space-6) 0 var(--space-4);
+        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+        margin-bottom: var(--space-8);
+    }
+    
+    .header-content {
+        padding: 0 var(--space-4);
+    }
+    
+    .title {
+        font-size: var(--text-2xl);
+    }
+    
+    .header-meta {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-3);
+    }
+    
+    .meta-item {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .header-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--space-4);
+    }
+    
+    .action-group {
+        display: none;
+    }
+    
+    .theme-selector {
+        display: none;
+    }
+    
+    .part-section {
+        padding: var(--space-4);
+        margin-bottom: var(--space-8);
+    }
+    
+    .part-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--space-3);
+    }
+    
+    .part-title {
+        font-size: var(--text-xl);
+    }
+    
+    .question {
+        padding: var(--space-4);
+    }
+    
+    .question-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--space-3);
+    }
+    
+    .question-number-container {
+        justify-content: space-between;
+    }
+    
+    .question-actions {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .summary-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+    
+    .summary-card {
+        padding: var(--space-4);
+    }
+    
+    .footer {
+        padding: var(--space-8) 0;
+    }
+    
+    .footer-main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: var(--space-4);
+    }
+    
+    .footer-info {
+        align-items: center;
+    }
+    
+    .footer-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .footer-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+    
+    /* Show FAB on mobile */
+    .fab-container {
+        display: block;
+    }
+    
+    /* Adjust indentation for mobile */
+    .indent-1 { padding-left: var(--space-6); margin-left: var(--space-1); }
+    .indent-2 { padding-left: var(--space-8); margin-left: var(--space-2); }
+    .indent-3 { padding-left: var(--space-10); margin-left: var(--space-3); }
+    .indent-4 { padding-left: var(--space-12); margin-left: var(--space-4); }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .title {
+        font-size: var(--text-xl);
+    }
+    
+    .part-title {
+        font-size: var(--text-lg);
+    }
+    
+    .question-number {
+        min-width: 50px;
+        padding: var(--space-1) var(--space-3);
+        font-size: var(--text-base);
+    }
+    
+    .action-btn {
+        padding: var(--space-1) var(--space-3);
+        font-size: var(--text-xs);
+    }
+    
+    .fab {
+        width: 48px;
+        height: 48px;
+        font-size: var(--text-lg);
+    }
+    
+    .fab-action {
+        width: 40px;
+        height: 40px;
+        font-size: var(--text-base);
+    }
+    
+    .mobile-theme-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================================================
+   PRINT STYLES
+   ============================================================================ */
+
+@media print {
+    @page {
+        margin: 20mm;
+        size: A4;
+    }
+    
+    body {
+        font-size: 11pt;
+        line-height: 1.5;
+        background: white !important;
+        color: black !important;
+    }
+    
+    .header {
+        background: white !important;
+        color: black !important;
+        box-shadow: none !important;
+        border-bottom: 2px solid black;
+        padding: var(--space-8) 0;
+        border-radius: 0 !important;
+    }
+    
+    .title {
+        color: black !important;
+        background: none !important;
+        -webkit-text-fill-color: black !important;
+        text-shadow: none !important;
+        font-size: var(--text-2xl);
+    }
+    
+    .header-actions,
+    .toggle-answer,
+    .question-actions,
+    .footer,
+    .fab-container,
+    .mobile-modal,
+    .skip-to-content,
+    .header-progress,
+    .theme-selector,
+    .marks-badge::before,
+    .question::before,
+    .part-section::before,
+    .modal {
+        display: none !important;
+    }
+    
+    .header-meta {
+        border-top: 1px solid #ccc;
+        padding-top: var(--space-4);
+        margin-top: var(--space-4);
+    }
+    
+    .meta-item {
+        background: none !important;
+        border: 1px solid #ccc !important;
+        color: black !important;
+        backdrop-filter: none !important;
+    }
+    
+    .part-section,
+    .question {
+        break-inside: avoid;
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+        transform: none !important;
+        page-break-inside: avoid;
+        margin-bottom: var(--space-8);
+    }
+    
+    .answer-content {
+        display: block !important;
+        max-height: none !important;
+        opacity: 1 !important;
+    }
+    
+    .question-number {
+        background: #f0f0f0 !important;
+        color: black !important;
+        -webkit-print-color-adjust: exact;
+    }
+    
+    .marks-badge {
+        background: #666 !important;
+        color: white !important;
+        -webkit-print-color-adjust: exact;
+    }
+    
+    a {
+        color: black !important;
+        text-decoration: underline;
+    }
+    
+    .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .content-wrapper {
+        background: white !important;
+    }
+    
+    /* Remove animations and transitions */
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* ============================================================================
+   SCROLLBAR STYLING
+   ============================================================================ */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--gray-100);
+    border-radius: var(--radius);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gray-400);
+    border-radius: var(--radius);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-500);
+}
+
+/* ============================================================================
+   SELECTION STYLING
+   ============================================================================ */
+
+::selection {
+    background: rgba(0, 136, 255, 0.2);
+    color: var(--primary-900);
+}
+
+::-moz-selection {
+    background: rgba(0, 136, 255, 0.2);
+    color: var(--primary-900);
+}
+
+/* ============================================================================
+   FOCUS STYLES
+   ============================================================================ */
+
+:focus {
+    outline: 2px solid var(--primary-500);
+    outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 2px solid var(--primary-500);
+    outline-offset: 2px;
+}
+
+/* ============================================================================
+   DARK MODE SUPPORT (System Preference)
+   ============================================================================ */
+
+@media (prefers-color-scheme: dark) {
+    .theme-system {
+        --theme-bg: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        --theme-bg-light: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        --theme-primary: #60a5fa;
+        --theme-secondary: #94a3b8;
+        --theme-accent: #c084fc;
+        --theme-success: #34d399;
+        --theme-text: #f1f5f9;
+        --theme-border: #334155;
+        --theme-card-bg: rgba(30, 41, 59, 0.9);
+        --theme-card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* ============================================================================
+   ACCESSIBILITY IMPROVEMENTS
+   ============================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    .theme-elegant,
+    .theme-academic,
+    .theme-professional,
+    .theme-minimal,
+    .theme-dark {
+        --theme-border: #000000;
+        --theme-text: #000000;
+    }
+    
+    .theme-dark {
+        --theme-text: #ffffff;
+        --theme-border: #ffffff;
+    }
+}
+
+/* ============================================================================
+   END OF CSS
+   ============================================================================ */
+        
+        /* Additional dynamic styles based on theme */
+        .theme-elegant {
+            background: var(--theme-bg-light);
+        }
+        
+        .theme-elegant .header {
+            background: var(--theme-bg);
+        }
+        
+        .theme-elegant .part-section::before {
+            background: linear-gradient(to bottom, var(--theme-primary), var(--theme-secondary));
+        }
+        
+        .theme-elegant .question-number {
+            background: linear-gradient(135deg, var(--theme-primary), var(--theme-secondary));
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="theme-elegant">
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+    
+    <div class="content-wrapper">
+        <div class="container">
+            
+        <header class="header">
+            <div class="header-content">
+                <div class="header-main">
+                    <div class="title-container">
+                        <h1 class="title">
+                            DAA PAPER 2
+                        </h1>
+                        <div class="title-decoration">
+                            <div class="decoration-line"></div>
+                            <div class="decoration-dot"></div>
+                            <div class="decoration-line"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="header-meta">
+                        
+                        <div class="meta-item"><i class="fas fa-calendar-alt"></i><span>February - 2024</span></div>
+                        
+                        
+                    </div>
+                </div>
+                
+                <div class="header-actions">
+                    <div class="action-group">
+                        <button id="print-btn" class="action-btn print-btn">
+                            <i class="fas fa-print"></i> Print
+                        </button>
+                        <button id="expand-all" class="action-btn expand-all-btn">
+                            <i class="fas fa-expand"></i> Expand All
+                        </button>
+                        <button id="collapse-all" class="action-btn collapse-all-btn">
+                            <i class="fas fa-compress"></i> Collapse All
+                        </button>
+                        <button id="stats-btn" class="action-btn stats-btn">
+                            <i class="fas fa-chart-pie"></i> Stats
+                        </button>
+                    </div>
+                    
+                    <div class="theme-selector">
+                        <label for="theme-switcher">
+                            <i class="fas fa-palette"></i>
+                            <span id="current-theme">Elegant</span>
+                        </label>
+                        <select id="theme-switcher" class="theme-select">
+                            <option value="elegant">Elegant</option>
+                            <option value="academic">Academic</option>
+                            <option value="professional">Professional</option>
+                            <option value="minimal">Minimal</option>
+                            <option value="dark">Dark</option>
+                            <option value="print">Print</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="header-progress">
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+        </header>
+        
+            <main id="main-content" class="content">
+                
+        <div class="summary-section">
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <div class="summary-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <div class="summary-content">
+                        <h3>3</h3>
+                        <p>Parts / Sections</p>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="summary-content">
+                        <h3>15</h3>
+                        <p>Total Questions</p>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="summary-content">
+                        <h3>77</h3>
+                        <p>Total Marks</p>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="summary-content">
+                        <h3>17.9K</h3>
+                        <p>Document Size</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+            <section class="part-section" id="part-1">
+                <div class="part-header">
+                    <div>
+                        <h2 class="part-title">
+                            <span class="part-icon"><i class="fas fa-bookmark"></i></span>
+                            PART - A
+                        </h2>
+                        
+            <div class="part-subtitle">
+                <span class="question-count">
+                    <i class="fas fa-list-ol"></i> 6 questions
+                </span>
+                <span class="total-marks">
+                    <i class="fas fa-chart-bar"></i> Total: 12 marks
+                </span>
+            </div>
+            
+                    </div>
+                    
+        <div class="marks-badge-lg" style="--badge-color: var(--success-600);">
+            <i class="fas fa-star"></i>
+            <span>2 marks</span>
+        </div>
+        
+                </div>
+            
+
+                <div class="part-description">
+                    <div class="description-content">
+                        <i class="fas fa-info-circle description-icon"></i>
+                        <div class="description-text">
+                            <p>Answer any five questions from this part each carries two marks : (5 x 2 =10)</p>
+                        </div>
+                    </div>
+                </div>
+                
+<div class="questions-container">
+
+        <div class="question has-answer" id="q1-1">
+            <div class="question-header">
+                <div class="question-number-container">
+                    <div class="question-number">
+                        <span class="number">1.</span>
+                        <span class="question-status">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </div>
+                    
+                </div>
+                <div class="question-actions">
+                    <button class="toggle-answer action-btn">
+                        <i class="fas fa-eye"></i> Show Answer
+                    </button>
+                    <button class="bookmark-btn action-btn" title="Bookmark question">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="question-body">
+                <div class="question-text">
+                    <div class="text-line">What is an algorithm ?</div>
+                </div>
+                <div class="answer-container">
+                    <div class="answer-header">
+                        <div class="answer-label">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Answer & Solution</span>
+                        </div>
+                        <div class="answer-actions">
+                            <button class="copy-answer" title="Copy answer">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="answer-content">
+                        <div class="answer-line">An algorithm is a step-by-step, unambiguous, finite, and effective procedure</div>
+<div class="answer-line">	for solving a well-defined computational problem. It takes zero or more inputs,</div>
+<div class="answer-line">	produces at least one output, and terminates after a finite number of steps. In</div>
+<div class="answer-line">	essence, it is a recipe or a precise set of instructions to accomplish a specific task.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="question has-answer" id="q1-2">
+            <div class="question-header">
+                <div class="question-number-container">
+                    <div class="question-number">
+                        <span class="number">2.</span>
+                        <span class="question-status">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </div>
+                    
+                </div>
+                <div class="question-actions">
+                    <button class="toggle-answer action-btn">
+                        <i class="fas fa-eye"></i> Show Answer
+                    </button>
+                    <button class="bookmark-btn action-btn" title="Bookmark question">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="question-body">
+                <div class="question-text">
+                    <div class="text-line">What is time complexity of an algorithm ?</div>
+                </div>
+                <div class="answer-container">
+                    <div class="answer-header">
+                        <div class="answer-label">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Answer & Solution</span>
+                        </div>
+                        <div class="answer-actions">
+                            <button class="copy-answer" title="Copy answer">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="answer-content">
+                        <div class="answer-line">Time complexity:</div>
+<div class="answer-line">	A measure of how the running time of an algorithm grows with the size of its input n.</div>
+<div class="answer-line">	It is usually expressed using asymptotic notation (e.g., O(n),O(n2)) and counts the</div>
+<div class="answer-line">	number of basic operations rather than actual clock time.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="question has-answer" id="q1-3">
+            <div class="question-header">
+                <div class="question-number-container">
+                    <div class="question-number">
+                        <span class="number">3.</span>
+                        <span class="question-status">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </div>
+                    
+                </div>
+                <div class="question-actions">
+                    <button class="toggle-answer action-btn">
+                        <i class="fas fa-eye"></i> Show Answer
+                    </button>
+                    <button class="bookmark-btn action-btn" title="Bookmark question">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="question-body">
+                <div class="question-text">
+                    <div class="text-line">Define graph.</div>
+                </div>
+                <div class="answer-container">
+                    <div class="answer-header">
+                        <div class="answer-label">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Answer & Solution</span>
+                        </div>
+                        <div class="answer-actions">
+                            <button class="copy-answer" title="Copy answer">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="answer-content">
+                        <div class="answer-line">A graph is a non-linear data structure consisting of a finite set of vertices (nodes) and a finite set of edges</div>
+<div class="answer-line">	that connect pairs of vertices.</div>
+<div class="answer-line">	Formally, a graph G is represented as:</div>
+<div class="answer-line">	G = (V, E)</div>
+<div class="answer-line">	where</div>
+<div class="answer-line">	V = set of vertices</div>
+<div class="answer-line">	E = set of edges connecting the vertices</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="question has-answer" id="q1-4">
+            <div class="question-header">
+                <div class="question-number-container">
+                    <div class="question-number">
+                        <span class="number">4.</span>
+                        <span class="question-status">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </div>
+                    
+                </div>
+                <div class="question-actions">
+                    <button class="toggle-answer action-btn">
+                        <i class="fas fa-eye"></i> Show Answer
+                    </button>
+                    <button class="bookmark-btn action-btn" title="Bookmark question">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="question-body">
+                <div class="question-text">
+                    <div class="text-line">What is minimum spanning tree ?</div>
+                </div>
+                <div class="answer-container">
+                    <div class="answer-header">
+                        <div class="answer-label">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Answer & Solution</span>
+                        </div>
+                        <div class="answer-actions">
+                            <button class="copy-answer" title="Copy answer">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="answer-content">
+                        <div class="answer-line">A Minimum Spanning Tree (MST) is a subgraph of a connected, weighted, undirected</div>
+<div class="answer-line">	graph that:</div>
+<div class="answer-line">	Includes all the vertices of the graph</div>
+<div class="answer-line">	Is a tree (i.e., has no cycles)</div>
+<div class="answer-line">	Has the minimum possible total edge weight among all spanning trees of the graph</div>
+<div class="answer-line">	If a graph has V vertices, then its MST will contain exactly V − 1 edges.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="question has-answer" id="q1-5">
+            <div class="question-header">
+                <div class="question-number-container">
+                    <div class="question-number">
+                        <span class="number">5.</span>
+                        <span class="question-status">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </div>
+                    
+                </div>
+                <div class="question-actions">
+                    <button class="toggle-answer action-btn">
+                        <i class="fas fa-eye"></i> Show Answer
+                    </button>
+                    <button class="bookmark-btn action-btn" title="Bookmark question">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="question-body">
+                <div class="question-text">
+                    <div class="text-line">Define greedy method.</div>
+                </div>
+                <div class="answer-container">
+                    <div class="answer-header">
+                        <div class="answer-label">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Answer & Solution</span>
+                        </div>
+                        <div class="answer-actions">
+                            <button class="copy-answer" title="Copy answer">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="answer-content">
+                        <div class="answer-line">The Greedy Method is a problem-solving technique in which a solution is built</div>
+<div class="answer-line">	step-by-step, and at each step the best possible (locally optimal) choice is selected without reconsidering previous decisions.</div>
+<div class="answer-line">	The hope is that these locally optimal choices will lead to a globally optimal solution.</div>
+<div class="answer-line">	This method works correctly only for problems that satisfy optimal substructure and the greedy-choice property. Examples</div>
+<div class="answer-line">	include Kruskal’s algorithm, Prim’s algorithm, and the Fractional Knapsack problem.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="question has-answer" id="q1-6">
+            <div class="question-header">
+                <div class="question-number-container">
+                    <div class="question-number">
+                        <span class="number">6.</span>
+                        <span class="question-status">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </div>
+                    
+                </div>
+                <div class="question-actions">
+                    <button class="toggle-answer action-btn">
+                        <i class="fas fa-eye"></i> Show Answer
+                    </button>
+                    <button class="bookmark-btn action-btn" title="Bookmark question">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="question-body">
+                <div class="question-text">
+                    <div class="text-line">What do you mean by divide and conquer technique ?</div>
+                </div>
+                <div class="answer-container">
+                    <div class="answer-header">
+                        <div class="answer-label">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Answer & Solution</span>
+                        </div>
+                        <div class="answer-actions">
+                            <button class="copy-answer" title="Copy answer">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="answer-content">
+                        <div class="answer-line">Divide and Conquer is a problem-solving technique in which a problem is broken into smaller subproblems, each subproblem is solved</div>
+<div class="answer-line">	independently, and then the solutions of the subproblems are combined to obtain the final solution.</div>
+<div class="answer-line">	It works in three phases:</div>
+<div class="answer-line">	Divide</div>
+<div class="answer-line">	The original problem is divided into two or more smaller subproblems of the same type.</div>
+<div class="answer-line">	Conquer</div>
+<div class="answer-line">	Each subproblem is solved recursively. If the subproblem is small enough, it is solved directly.</div>
+<div class="answer-line">	Combine</div>
+<div class="answer-line">	The solutions of the subproblems are merged to obtain the solution of the original problem.</div>
+<div class="answer-line">	Examples of algorithms using this technique include Merge Sort, Quick Sort, Binary Search, and Strassen’s Matrix Multiplication.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+</div>
+</section>
+
+            <section class="part-section" id="part-2">
+                <div class="part-header">
+                    <div>
+                        <h2 class="part-title">
+                            <span class="part-icon"><i class="fas fa-bookmark"></i></span>
+                            PART - B
+                        </h2>
+                        
+            <div class="part-subtitle">
+                <span class="question-count">
+                    <i class="fas fa-list-ol"></i> 5 questions
+                </span>
+                <span class="total-marks">
+                    <i class="fas fa-chart-bar"></i> Total: 25 marks
+                </span>
+            </div>
+            
+                    </div>
+                    
+        <div class="marks-badge-lg" style="--badge-color: var(--warning-500);">
+            <i class="fas fa-star-half-alt"></i>
+            <span>5 marks</span>
+        </div>
+        
+                </div>
+            
+
+                <div class="part-description">
+                    <div class="description-content">
+                        <i class="fas fa-info-circle description-icon"></i>
+                        <div class="description-text">
+                            <p>Answer any four questions.Each question carries 5 marks : (4 x 5 = 20)</p>
+                        </div>
+                    </div>
+                </div>
+                
+<div class="questions-container">
+
+        <div class="question has-answer" id="q2-1">
+            <div class="question-header">
+                <div class="question-number-container">
+                    <div class="question-number">
+                        <span class="number">7.</span>
+                        <span class="question-status">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </div>
+                    
+                </div>
+                <div class="question-actions">
+                    <button class="toggle-answer action-btn">
+                        <i class="fas fa-eye"></i> Show Answer
+                    </button>
+                    <button class="bookmark-btn action-btn" title="Bookmark question">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="question-body">
+                <div class="question-text">
+                    <div class="text-line">Write an algorithm for bubble sort and find its time complexity.</div>
+                </div>
+                <div class="answer-container">
+                    <div class="answer-header">
+                        <div class="answer-label">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Answer & Solution</span>
+                        </div>
+                        <div class="answer-actions">
+                            <button class="copy-answer" title="Copy answer">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="answer-content">
+                        <div class="answer-line">Bubble Sort is a simple comparison-based sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps</div>
+<div class="answer-line"> 	them if they are in the wrong order. The pass through the list is repeated until no swaps are needed.</div>
+<div class="answer-line">	Algorithm (Step-by-Step)</div>
+<div class="answer-line">	Algorithm BubbleSort(A[0..n-1])</div>
+<div class="answer-line">	// Sorts a given array by bubble sort</div>
+<div class="answer-line">	// Input: An array A[0..n-1] of orderable elements</div>
+<div class="answer-line">	// Output: Array A[0..n-1] sorted in non-decreasing order</div>
+<div class="answer-line">	for i ← 0 to n-2 do</div>
+<div class="answer-line indent-1">	    for j ← 0 to n-2-i do</div>
+<div class="answer-line indent-2">	        if A[j+1] &lt; A[j]</div>
+<div class="answer-line indent-3">	            // Swap A[j] and A[j+1]</div>
+<div class="answer-line indent-3">	            temp ← A[j]</div>
+<div class="answer-line indent-3">	            A[j] ← A[j+1]</div>
+<div class="answer-line indent-3">	            A[j+1] ← temp</div>
+<div class="answer-line">	In each pass (outer loop), the largest unsorted element &quot;bubbles up&quot; to its correct position at the end.</div>
+<div class="answer-line">	The inner loop compares adjacent pairs and swaps them if they&#x27;re in wrong order.</div>
+<div class="answer-line">	After each pass, the next largest element is in place, so inner loop range decreases.</div>
+<div class="answer-line">	The optimized version stops early if no swaps occur (array is sorted).</div>
+<div class="answer-line">	Time Complexity</div>
+<div class="answer-line">	Best Case (Optimized): O(n) - Array already sorted, one pass with n-1 comparisons</div>
+<div class="answer-line">	Average Case: Θ(n²)</div>
+<div class="answer-line">	Worst Case: O(n²) - Array sorted in reverse order</div>
+<div class="answer-line">	Space Complexity</div>
+<div class="answer-line">	O(1) - Constant space, in-place sorting.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="question has-answer" id="q2-2">
+            <div class="question-header">
+                <div class="question-number-container">
+                    <div class="question-number">
+                        <span class="number">8.</span>
+                        <span class="question-status">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </div>
+                    
+                </div>
+                <div class="question-actions">
+                    <button class="toggle-answer action-btn">
+                        <i class="fas fa-eye"></i> Show Answer
+                    </button>
+                    <button class="bookmark-btn action-btn" title="Bookmark question">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="question-body">
+                <div class="question-text">
+                    <div class="text-line">Solve the given Lnapsack problem using Brute Force technique. (W1,W2,W3)=(20,25,10) ,(P1,P2,P3)=(30,40,35), M=40</div>
+                </div>
+                <div class="answer-container">
+                    <div class="answer-header">
+                        <div class="answer-label">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Answer & Solution</span>
+                        </div>
+                        <div class="answer-actions">
+                            <button class="copy-answer" title="Copy answer">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="answer-content">
+                        <div class="answer-line">We list all possible combinations of items and select the one that gives the maximum profit without exceeding the capacity.</div>
+<div class="answer-line">	Step 1: List all subsets with total weight and profit</div>
+<div class="answer-line">	No item selected</div>
+<div class="answer-line">	Total Weight = 0</div>
+<div class="answer-line">	Total Profit = 0</div>
+<div class="answer-line">	Item 1</div>
+<div class="answer-line">	Weight = 20</div>
+<div class="answer-line">	Profit = 30</div>
+<div class="answer-line">	Item 2</div>
+<div class="answer-line">	Weight = 25</div>
+<div class="answer-line">	Profit = 40</div>
+<div class="answer-line">	Item 3</div>
+<div class="answer-line">	Weight = 10</div>
+<div class="answer-line">	Profit = 35</div>
+<div class="answer-line">	Item 1 + Item 2</div>
+<div class="answer-line">	Weight = 20 + 25 = 45 &gt; 40 (Not allowed)</div>
+<div class="answer-line">	Item 1 + Item 3</div>
+<div class="answer-line">	Weight = 20 + 10 = 30</div>
+<div class="answer-line">	Profit = 30 + 35 = 65</div>
+<div class="answer-line">	Item 2 + Item 3</div>
+<div class="answer-line">	Weight = 25 + 10 = 35</div>
+<div class="answer-line">	Profit = 40 + 35 = 75</div>
+<div class="answer-line">	Item 1 + Item 2 + Item 3</div>
+<div class="answer-line">	Weight = 20 + 25 + 10 = 55 &gt; 40 (Not allowed)</div>
+<div class="answer-line">	Step 2: Choose valid combination with maximum profit</div>
+<div class="answer-line">	Valid combinations and profits are:</div>
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Item 1 → Profit = 30</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Item 2 → Profit = 40</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Item 3 → Profit = 35</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Item 1 + 3 → Profit = 65</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Item 2 + 3 → Profit = 75 ← Maximum</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">None → Profit = 0</span>
+                </div>
+                
+<div class="answer-line">	Result</div>
+<div class="answer-line">	The optimal solution is:</div>
+<div class="answer-line">	Select Item 2 and Item 3</div>
+<div class="answer-line">	Total Weight = 35 (≤ 40)</div>
+<div class="answer-line">	Total Profit = 75</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="question has-answer" id="q2-3">
+            <div class="question-header">
+                <div class="question-number-container">
+                    <div class="question-number">
+                        <span class="number">9.</span>
+                        <span class="question-status">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </div>
+                    
+                </div>
+                <div class="question-actions">
+                    <button class="toggle-answer action-btn">
+                        <i class="fas fa-eye"></i> Show Answer
+                    </button>
+                    <button class="bookmark-btn action-btn" title="Bookmark question">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="question-body">
+                <div class="question-text">
+                    <div class="text-line">Find the minimum spaning tree using Prim&#x27;s algorithm for the below graph.1-2=25,1-3=15,2-5=40,2-4=30,2-6=35,3-5=20,4-5=10,5-6=45.</div>
+<div class="text-line">(1)---25-----(2)</div>
+<div class="text-line"> |          /|  \</div>
+<div class="text-line"> 15        / 30  35</div>
+<div class="text-line"> |        /  |    \</div>
+                </div>
+                <div class="answer-container">
+                    <div class="answer-header">
+                        <div class="answer-label">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Answer & Solution</span>
+                        </div>
+                        <div class="answer-actions">
+                            <button class="copy-answer" title="Copy answer">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="answer-content">
+                        <div class="answer-line">(3)      / (4)-50-(6)</div>
+<div class="answer-line">  \     /  10     /</div>
+<div class="answer-line">   \   40 /     45</div>
+<div class="answer-line indent-1">    20 / /     /</div>
+<div class="answer-line indent-1">     (5)------/</div>
+<div class="answer-line"> Ans: Start with vertex 1.</div>
+<div class="answer-line">	Step 1</div>
+<div class="answer-line">	Current tree vertices: {1}</div>
+<div class="answer-line">	Available edges:</div>
+<div class="answer-line">	1–2 = 25</div>
+<div class="answer-line">	1–3 = 15 ← minimum</div>
+<div class="answer-line">	Select 1–3 (15)</div>
+<div class="answer-line">	Tree vertices: {1, 3}</div>
+<div class="answer-line">	Step 2</div>
+<div class="answer-line">	Available edges from the tree:</div>
+<div class="answer-line">	1–2 = 25</div>
+<div class="answer-line">	3–5 = 20 ← minimum</div>
+<div class="answer-line">	Select 3–5 (20)</div>
+<div class="answer-line">	Tree vertices: {1, 3, 5}</div>
+<div class="answer-line">	Step 3</div>
+<div class="answer-line">	Available edges:</div>
+<div class="answer-line">	1–2 = 25</div>
+<div class="answer-line">	2–5 = 40</div>
+<div class="answer-line">	4–5 = 10 ← minimum</div>
+<div class="answer-line">	5–6 = 45</div>
+<div class="answer-line">	Select 4–5 (10)</div>
+<div class="answer-line">	Tree vertices: {1, 3, 5, 4}</div>
+<div class="answer-line">	Step 4</div>
+<div class="answer-line">	Available edges:</div>
+<div class="answer-line">	1–2 = 25 ← minimum</div>
+<div class="answer-line">	2–5 = 40</div>
+<div class="answer-line">	2–4 = 30</div>
+<div class="answer-line">	5–6 = 45</div>
+<div class="answer-line">	Select 1–2 (25)</div>
+<div class="answer-line">	Tree vertices: {1, 2, 3, 4, 5}</div>
+<div class="answer-line">	Step 5</div>
+<div class="answer-line">	Remaining vertex: 6</div>
+<div class="answer-line">	Available edges to 6:</div>
+<div class="answer-line">	2–6 = 35 ← minimum</div>
+<div class="answer-line">	5–6 = 45</div>
+<div class="answer-line">	Select 2–6 (35)</div>
+<div class="answer-line">	Tree vertices: {1, 2, 3, 4, 5, 6}</div>
+<div class="answer-line">	All vertices are now included.</div>
+<div class="answer-line">	Minimum Spanning Tree Edges</div>
+<div class="answer-line">	1–3 = 15</div>
+<div class="answer-line">	3–5 = 20</div>
+<div class="answer-line">	5–4 = 10</div>
+<div class="answer-line">	1–2 = 25</div>
+<div class="answer-line">	2–6 = 35</div>
+<div class="answer-line">	Total Minimum Cost</div>
+<div class="answer-line">	Total weight = 15 + 20 + 10 + 25 + 35</div>
+<div class="answer-line">	= 105</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="question has-answer" id="q2-4">
+            <div class="question-header">
+                <div class="question-number-container">
+                    <div class="question-number">
+                        <span class="number">10.</span>
+                        <span class="question-status">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </div>
+                    
+                </div>
+                <div class="question-actions">
+                    <button class="toggle-answer action-btn">
+                        <i class="fas fa-eye"></i> Show Answer
+                    </button>
+                    <button class="bookmark-btn action-btn" title="Bookmark question">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="question-body">
+                <div class="question-text">
+                    <div class="text-line">Write a program to implement merge sort algorithm for sorting a list of integers in ascending order.</div>
+                </div>
+                <div class="answer-container">
+                    <div class="answer-header">
+                        <div class="answer-label">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Answer & Solution</span>
+                        </div>
+                        <div class="answer-actions">
+                            <button class="copy-answer" title="Copy answer">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="answer-content">
+                        <div class="answer-line">def merge_sort(arr):</div>
+<div class="answer-line indent-1">	    if len(arr) &gt; 1:</div>
+<div class="answer-line indent-2">	        mid = len(arr) // 2</div>
+<div class="answer-line indent-2">	        left = arr[:mid]</div>
+<div class="answer-line indent-2">	        right = arr[mid:]</div>
+<div class="answer-line indent-2">	        merge_sort(left)</div>
+<div class="answer-line indent-2">	        merge_sort(right)</div>
+<div class="answer-line indent-2">	        i = j = k = 0</div>
+<div class="answer-line indent-2">	        # Merge the two halves</div>
+<div class="answer-line indent-2">	        while i &lt; len(left) and j &lt; len(right):</div>
+<div class="answer-line indent-3">	            if left[i] &lt;= right[j]:</div>
+<div class="answer-line indent-4">	                arr[k] = left[i]</div>
+<div class="answer-line indent-4">	                i += 1</div>
+<div class="answer-line indent-3">	            else:</div>
+<div class="answer-line indent-4">	                arr[k] = right[j]</div>
+<div class="answer-line indent-4">	                j += 1</div>
+<div class="answer-line indent-3">	            k += 1</div>
+<div class="answer-line indent-2">	        # Copy remaining elements of left[]</div>
+<div class="answer-line indent-2">	        while i &lt; len(left):</div>
+<div class="answer-line indent-3">	            arr[k] = left[i]</div>
+<div class="answer-line indent-3">	            i += 1</div>
+<div class="answer-line indent-3">	            k += 1</div>
+<div class="answer-line indent-2">	        # Copy remaining elements of right[]</div>
+<div class="answer-line indent-2">	        while j &lt; len(right):</div>
+<div class="answer-line indent-3">	            arr[k] = right[j]</div>
+<div class="answer-line indent-3">	            j += 1</div>
+<div class="answer-line indent-3">	            k += 1</div>
+<div class="answer-line">	# Driver code</div>
+<div class="answer-line">	n = int(input(&quot;Enter number of elements: &quot;))</div>
+<div class="answer-line">	arr = []</div>
+<div class="answer-line">	print(&quot;Enter the elements:&quot;)</div>
+<div class="answer-line">	for _ in range(n):</div>
+<div class="answer-line indent-1">	    arr.append(int(input()))</div>
+<div class="answer-line">	merge_sort(arr)</div>
+<div class="answer-line">	print(&quot;Sorted list in ascending order:&quot;)</div>
+<div class="answer-line">	print(arr)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="question has-answer" id="q2-5">
+            <div class="question-header">
+                <div class="question-number-container">
+                    <div class="question-number">
+                        <span class="number">11.</span>
+                        <span class="question-status">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </div>
+                    
+                </div>
+                <div class="question-actions">
+                    <button class="toggle-answer action-btn">
+                        <i class="fas fa-eye"></i> Show Answer
+                    </button>
+                    <button class="bookmark-btn action-btn" title="Bookmark question">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="question-body">
+                <div class="question-text">
+                    <div class="text-line">Explain Dijkstra&#x27;s algorithm with an example.</div>
+                </div>
+                <div class="answer-container">
+                    <div class="answer-header">
+                        <div class="answer-label">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Answer & Solution</span>
+                        </div>
+                        <div class="answer-actions">
+                            <button class="copy-answer" title="Copy answer">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="answer-content">
+                        <div class="answer-line">Dijkstra’s Algorithm is a greedy method used to find the shortest path from a single source vertex to all other vertices in a weighted,</div>
+<div class="answer-line">	connected graph with non-negative edge weights.</div>
+<div class="answer-line">	The algorithm maintains a set of vertices whose shortest distance from the source is already known, and repeatedly selects the vertex with</div>
+<div class="answer-line">	 the minimum temporary distance.</div>
+<div class="answer-line">	Basic Idea</div>
+<div class="answer-line">	Assign a distance value to every vertex:</div>
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">0 for the source vertex</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">∞ (infinity) for all others</span>
+                </div>
+                
+<div class="answer-line">	Mark all vertices as unvisited.</div>
+<div class="answer-line">	Select the unvisited vertex with the smallest distance value.</div>
+<div class="answer-line">	Update the distance of its neighbouring vertices.</div>
+<div class="answer-line">	Mark the selected vertex as visited.</div>
+<div class="answer-line">	Repeat steps 3–5 until all vertices are visited.</div>
+<div class="answer-line">	Notation</div>
+<div class="answer-line">	dist[v] = shortest known distance from source to vertex v</div>
+<div class="answer-line">	Example</div>
+<div class="answer-line">	Consider the following weighted graph:</div>
+<div class="answer-line">	A–B = 4</div>
+<div class="answer-line">	A–C = 2</div>
+<div class="answer-line">	B–C = 5</div>
+<div class="answer-line">	B–D = 10</div>
+<div class="answer-line">	C–E = 3</div>
+<div class="answer-line">	E–D = 4</div>
+<div class="answer-line">	D–F = 11</div>
+<div class="answer-line">	Source vertex = A</div>
+<div class="answer-line">	Step-by-Step Execution</div>
+<div class="answer-line">	Initial distances:</div>
+<div class="answer-line">	Vertex Distance from A</div>
+<div class="answer-line">	A 0</div>
+<div class="answer-line">	B ∞</div>
+<div class="answer-line">	C ∞</div>
+<div class="answer-line">	D ∞</div>
+<div class="answer-line">	E ∞</div>
+<div class="answer-line">	F ∞</div>
+<div class="answer-line">	Visited set = { }</div>
+<div class="answer-line">	Step 1: Select A (smallest distance = 0)</div>
+<div class="answer-line">	Update neighbours:</div>
+<div class="answer-line">	B = min(∞ , 0 + 4) = 4</div>
+<div class="answer-line">	C = min(∞ , 0 + 2) = 2</div>
+<div class="answer-line">	Visited = {A}</div>
+<div class="answer-line">	Step 2: Select C (distance = 2)</div>
+<div class="answer-line">	Update neighbours:</div>
+<div class="answer-line">	E = min(∞ , 2 + 3) = 5</div>
+<div class="answer-line">	B = min(4 , 2 + 5) = 4 (unchanged)</div>
+<div class="answer-line">	Visited = {A, C}</div>
+<div class="answer-line">	Step 3: Select B (distance = 4)</div>
+<div class="answer-line">	Update neighbours:</div>
+<div class="answer-line">	D = min(∞ , 4 + 10) = 14</div>
+<div class="answer-line">	Visited = {A, C, B}</div>
+<div class="answer-line">	Step 4: Select E (distance = 5)</div>
+<div class="answer-line">	Update neighbours:</div>
+<div class="answer-line">	D = min(14 , 5 + 4) = 9 ← updated</div>
+<div class="answer-line">	Visited = {A, C, B, E}</div>
+<div class="answer-line">	Step 5: Select D (distance = 9)</div>
+<div class="answer-line">	Update neighbours:</div>
+<div class="answer-line">	F = min(∞ , 9 + 11) = 20</div>
+<div class="answer-line">	Visited = {A, C, B, E, D}</div>
+<div class="answer-line">	Step 6: Select F (distance = 20)</div>
+<div class="answer-line">	Visited = {A, C, B, E, D, F}</div>
+<div class="answer-line">	All vertices are processed.</div>
+<div class="answer-line">	Final Shortest Distances from A</div>
+<div class="answer-line">	A → A = 0</div>
+<div class="answer-line">	A → C = 2</div>
+<div class="answer-line">	A → B = 4</div>
+<div class="answer-line">	A → E = 5</div>
+<div class="answer-line">	A → D = 9</div>
+<div class="answer-line">	A → F = 20</div>
+<div class="answer-line">	Key Points</div>
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Works only for non-negative edge weights</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Based on greedy strategy</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Time complexity:</span>
+                </div>
+                
+<div class="answer-line">	– O(V²) using matrix</div>
+<div class="answer-line">	– O((V + E) log V) using priority queue</div>
+<div class="answer-line">	Conclusion</div>
+<div class="answer-line">	Dijkstra’s Algorithm efficiently finds the shortest path from a single source to all other vertices in a weighted graph with non</div>
+<div class="answer-line">	negative edges by repeatedly selecting the vertex with the minimum tentative distance and updating its neighbours.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+</div>
+</section>
+
+            <section class="part-section" id="part-3">
+                <div class="part-header">
+                    <div>
+                        <h2 class="part-title">
+                            <span class="part-icon"><i class="fas fa-bookmark"></i></span>
+                            PART - C
+                        </h2>
+                        
+            <div class="part-subtitle">
+                <span class="question-count">
+                    <i class="fas fa-list-ol"></i> 4 questions
+                </span>
+                <span class="total-marks">
+                    <i class="fas fa-chart-bar"></i> Total: 40 marks
+                </span>
+            </div>
+            
+                    </div>
+                    
+        <div class="marks-badge-lg" style="--badge-color: var(--accent-500);">
+            <i class="fas fa-certificate"></i>
+            <span>10 marks</span>
+        </div>
+        
+                </div>
+            
+
+                <div class="part-description">
+                    <div class="description-content">
+                        <i class="fas fa-info-circle description-icon"></i>
+                        <div class="description-text">
+                            <p>Answer any three questions. Each question caries 10 marks : (3 x 10 = 30)</p>
+                        </div>
+                    </div>
+                </div>
+                
+<div class="questions-container">
+
+        <div class="question has-answer" id="q3-1">
+            <div class="question-header">
+                <div class="question-number-container">
+                    <div class="question-number">
+                        <span class="number">12.</span>
+                        <span class="question-status">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </div>
+                    
+                </div>
+                <div class="question-actions">
+                    <button class="toggle-answer action-btn">
+                        <i class="fas fa-eye"></i> Show Answer
+                    </button>
+                    <button class="bookmark-btn action-btn" title="Bookmark question">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="question-body">
+                <div class="question-text">
+                    <div class="text-line">Explain asymptotic notations.</div>
+                </div>
+                <div class="answer-container">
+                    <div class="answer-header">
+                        <div class="answer-label">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Answer & Solution</span>
+                        </div>
+                        <div class="answer-actions">
+                            <button class="copy-answer" title="Copy answer">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="answer-content">
+                        <div class="answer-line">Asymptotic notations are mathematical tools used to describe the growth rate of the running time or space requirement of an algorithm as the input size n becomes very</div>
+<div class="answer-line">	 large. They help us compare the efficiency of algorithms independent of machine and implementation details.</div>
+<div class="answer-line">	The three main asymptotic notations are:</div>
+<div class="answer-line">	Big–Oh Notation — O(f(n))</div>
+<div class="answer-line">	Big-Oh gives an asymptotic upper bound on the running time of an algorithm.</div>
+<div class="answer-line">	It represents the worst-case growth rate.</div>
+<div class="answer-line">	Formally,</div>
+<div class="answer-line">	T(n) = O(f(n))</div>
+<div class="answer-line">	if there exist constants c &gt; 0 and n₀ such that</div>
+<div class="answer-line">	T(n) ≤ c · f(n) for all n ≥ n₀.</div>
+<div class="answer-line">	Example:</div>
+<div class="answer-line">	If T(n) = 3n² + 5n + 2, then</div>
+<div class="answer-line">	T(n) = O(n²)</div>
+<div class="answer-line">	Big–Omega Notation — Ω(f(n))</div>
+<div class="answer-line">	Big-Omega gives an asymptotic lower bound on the running time.</div>
+<div class="answer-line">	It represents the best-case growth rate.</div>
+<div class="answer-line">	Formally,</div>
+<div class="answer-line">	T(n) = Ω(f(n))</div>
+<div class="answer-line">	if there exist constants c &gt; 0 and n₀ such that</div>
+<div class="answer-line">	T(n) ≥ c · f(n) for all n ≥ n₀.</div>
+<div class="answer-line">	Example:</div>
+<div class="answer-line">	T(n) = 3n² + 5n + 2</div>
+<div class="answer-line">	⇒ T(n) = Ω(n²)</div>
+<div class="answer-line">	Big–Theta Notation — Θ(f(n))</div>
+<div class="answer-line">	Big-Theta provides a tight bound.</div>
+<div class="answer-line">	It represents the exact asymptotic growth rate.</div>
+<div class="answer-line">	Formally,</div>
+<div class="answer-line">	T(n) = Θ(f(n))</div>
+<div class="answer-line">	if it is both O(f(n)) and Ω(f(n)).</div>
+<div class="answer-line">	Example:</div>
+<div class="answer-line">	T(n) = 3n² + 5n + 2</div>
+<div class="answer-line">	⇒ T(n) = Θ(n²)</div>
+<div class="answer-line">	Why Asymptotic Notations are Used</div>
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">To analyze algorithm performance for large input sizes</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">To ignore machine-dependent constants</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">To compare algorithms mathematically</span>
+                </div>
+                
+<div class="answer-line">	Common Growth Orders (fastest to slowest)</div>
+<div class="answer-line">	O(1) &lt; O(log n) &lt; O(n) &lt; O(n log n) &lt; O(n²) &lt; O(2ⁿ) &lt; O(n!)</div>
+<div class="answer-line">	Conclusion</div>
+<div class="answer-line">	Asymptotic notations describe the running time of algorithms in terms of input size n and help evaluate efficiency.</div>
+<div class="answer-line">	Big-Oh gives the upper bound, Big-Omega gives the lower bound, and Big-Theta gives the tight bound.</div>
+
+                <div class="text-line numbered">
+                    <span class="list-number">13.</span>
+                    <span class="list-content">Explain lower bound arguments.List and explain methods to obtain .</span>
+                </div>
+                
+<div class="answer-line"> Ans: A lower bound of a problem is the best possible (minimum) running time that any algorithm can ever achieve for solving that problem in the worst case.</div>
+<div class="answer-line">	It is a theoretical limit on performance — no algorithm can do better than this bound.</div>
+<div class="answer-line">	If the lower bound of a problem is f(n), then every algorithm that solves this problem must take at least f(n) time in the worst case.</div>
+<div class="answer-line">	Examples</div>
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Comparison-based sorting has a lower bound of Ω(n log n)</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Searching in an unsorted array has a lower bound of Ω(n)</span>
+                </div>
+                
+<div class="answer-line">	So, lower bound arguments help us decide whether an algorithm is optimal.</div>
+<div class="answer-line">	If an algorithm matches the lower bound, it is called asymptotically optimal.</div>
+<div class="answer-line">	Methods to Obtain Lower Bounds</div>
+<div class="answer-line">	There are mainly three commonly used methods:</div>
+<div class="answer-line">	Direct Counting Argument</div>
+<div class="answer-line">	In this method, we directly count the minimum number of operations required to solve a problem.</div>
+<div class="answer-line">	Example:</div>
+<div class="answer-line">	To search in an unsorted list of n elements, at least n comparisons may be required in the worst case.</div>
+<div class="answer-line">	Therefore, the lower bound is:</div>
+<div class="answer-line">	Ω(n)</div>
+<div class="answer-line">	This method is simple and usually applies to straightforward problems.</div>
+<div class="answer-line">	Decision Tree Method</div>
+<div class="answer-line">	This method is used mainly for comparison-based algorithms such as sorting and searching.</div>
+<div class="answer-line">	Idea:</div>
+<div class="answer-line">	Every comparison made by the algorithm is represented as a decision (yes/no) node in a binary tree.</div>
+<div class="answer-line">	The height of the tree represents the minimum number of comparisons in the worst case.</div>
+<div class="answer-line">	For comparison-based sorting of n elements:</div>
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Total possible permutations = n!</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">A binary decision tree with height h can distinguish at most 2^h outcomes</span>
+                </div>
+                
+<div class="answer-line">	So,</div>
+<div class="answer-line">	2^h ≥ n!</div>
+<div class="answer-line">	Taking log,</div>
+<div class="answer-line">	h ≥ log₂(n!)</div>
+<div class="answer-line">	Using Stirling’s approximation:</div>
+<div class="answer-line">	log₂(n!) = Ω(n log n)</div>
+<div class="answer-line">	So the lower bound of comparison-based sorting is:</div>
+<div class="answer-line">	Ω(n log n)</div>
+<div class="answer-line">	Adversary (or Game-Theoretic) Method</div>
+<div class="answer-line">	In this method, we assume an adversary (opponent) who answers the algorithm’s questions in such a way that the algorithm is forced to do the maximum possible work.</div>
+<div class="answer-line">	The adversary guarantees that no algorithm can solve the problem faster than a certain limit.</div>
+<div class="answer-line">	This helps derive tight worst-case lower bounds.</div>
+<div class="answer-line">	Example:</div>
+<div class="answer-line">	In searching, the adversary can always pretend the key is not found until the last element is checked, forcing Ω(n) comparisons.</div>
+<div class="answer-line">	Conclusion</div>
+<div class="answer-line">	Lower bound arguments help determine the minimum possible time complexity of a problem irrespective of the algorithm used.</div>
+<div class="answer-line">	The main methods to obtain lower bounds are:</div>
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Direct Counting</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Decision Tree Method</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Adversary Method</span>
+                </div>
+                
+<div class="answer-line">	They are fundamental in theoretical computer science for proving whether an algorithm is optimal.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="question has-answer" id="q3-2">
+            <div class="question-header">
+                <div class="question-number-container">
+                    <div class="question-number">
+                        <span class="number">14.</span>
+                        <span class="question-status">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </div>
+                    
+                </div>
+                <div class="question-actions">
+                    <button class="toggle-answer action-btn">
+                        <i class="fas fa-eye"></i> Show Answer
+                    </button>
+                    <button class="bookmark-btn action-btn" title="Bookmark question">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="question-body">
+                <div class="question-text">
+                    <div class="text-line">Define tree. explain binary tree traversals.</div>
+                </div>
+                <div class="answer-container">
+                    <div class="answer-header">
+                        <div class="answer-label">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Answer & Solution</span>
+                        </div>
+                        <div class="answer-actions">
+                            <button class="copy-answer" title="Copy answer">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="answer-content">
+                        <div class="answer-line">A tree is a non-linear hierarchical data structure consisting of a set of nodes connected by edges.</div>
+<div class="answer-line">	It has the following properties:</div>
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">There is one special node called the root</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Every node (except root) has exactly one parent</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Nodes having no children are called leaf nodes</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">There are no cycles in a tree</span>
+                </div>
+                
+<div class="answer-line">	A tree is widely used to represent hierarchical structures such as file systems, organization charts, etc.</div>
+<div class="answer-line">	Binary Tree</div>
+<div class="answer-line">	A binary tree is a tree in which each node has at most two children, usually referred to as:</div>
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Left child</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Right child</span>
+                </div>
+                
+<div class="answer-line">	Binary Tree Traversals</div>
+<div class="answer-line">	Traversal means visiting all the nodes of a binary tree in a specific order.</div>
+<div class="answer-line">	The main traversal methods are:</div>
+<div class="answer-line">	Inorder Traversal (Left – Root – Right)</div>
+<div class="answer-line">	Steps:</div>
+<div class="answer-line">	Traverse the left subtree</div>
+<div class="answer-line">	Visit the root node</div>
+<div class="answer-line">	Traverse the right subtree</div>
+<div class="answer-line">	For a Binary Search Tree, inorder traversal gives sorted order of elements.</div>
+<div class="answer-line">	Example order:</div>
+<div class="answer-line">	Left → Root → Right</div>
+<div class="answer-line">	Preorder Traversal (Root – Left – Right)</div>
+<div class="answer-line">	Steps:</div>
+<div class="answer-line">	Visit the root node</div>
+<div class="answer-line">	Traverse the left subtree</div>
+<div class="answer-line">	Traverse the right subtree</div>
+<div class="answer-line">	Used for:</div>
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Creating copy of tree</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Prefix notation of expressions</span>
+                </div>
+                
+<div class="answer-line">	Example order:</div>
+<div class="answer-line">	Root → Left → Right</div>
+<div class="answer-line">	Postorder Traversal (Left – Right – Root)</div>
+<div class="answer-line">	Steps:</div>
+<div class="answer-line">	Traverse the left subtree</div>
+<div class="answer-line">	Traverse the right subtree</div>
+<div class="answer-line">	Visit the root node</div>
+<div class="answer-line">	Used for:</div>
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Deleting/freeing tree nodes</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Postfix expression evaluation</span>
+                </div>
+                
+<div class="answer-line">	Example order:</div>
+<div class="answer-line">	Left → Right → Root</div>
+<div class="answer-line">	Conclusion</div>
+<div class="answer-line">	A tree is a hierarchical structure with nodes connected without cycles.</div>
+<div class="answer-line">	Binary tree traversal methods (Inorder, Preorder, Postorder) provide systematic ways to visit every node in a binary tree.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="question has-answer" id="q3-3">
+            <div class="question-header">
+                <div class="question-number-container">
+                    <div class="question-number">
+                        <span class="number">15.</span>
+                        <span class="question-status">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </div>
+                    
+                </div>
+                <div class="question-actions">
+                    <button class="toggle-answer action-btn">
+                        <i class="fas fa-eye"></i> Show Answer
+                    </button>
+                    <button class="bookmark-btn action-btn" title="Bookmark question">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="question-body">
+                <div class="question-text">
+                    <div class="text-line">Write short note on :     a) Depth first search.</div>
+                </div>
+                <div class="answer-container">
+                    <div class="answer-header">
+                        <div class="answer-label">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Answer & Solution</span>
+                        </div>
+                        <div class="answer-actions">
+                            <button class="copy-answer" title="Copy answer">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="answer-content">
+                        <div class="answer-line">Depth First Search (DFS) is a graph traversal technique used to visit all the vertices of a graph.</div>
+<div class="answer-line">	It starts from a selected source vertex and explores as far as possible along each branch before backtracking.</div>
+<div class="answer-line">	DFS uses a stack data structure, either explicitly or through recursion.</div>
+<div class="answer-line">	Working Principle</div>
+<div class="answer-line">	Visit the starting vertex and mark it as visited.</div>
+<div class="answer-line">	Move to any unvisited adjacent vertex and repeat the process.</div>
+<div class="answer-line">	If no adjacent unvisited vertex exists, backtrack to the previous vertex.</div>
+<div class="answer-line">	Continue until all vertices reachable from the source are visited.</div>
+<div class="answer-line">	Implementation</div>
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Recursive method → uses system call stack</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Iterative method → uses an explicit stack</span>
+                </div>
+                
+<div class="answer-line">	Applications of DFS</div>
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Detecting cycles in graphs</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Topological sorting</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Finding connected components</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Solving puzzles like mazes</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Path finding</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Tree traversals (Preorder/Postorder)</span>
+                </div>
+                
+<div class="answer-line">	Time Complexity</div>
+<div class="answer-line">	O(V + E),</div>
+<div class="answer-line">	where V = number of vertices and E = number of edges.</div>
+<div class="answer-line">	Key Features</div>
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Goes deep before exploring siblings</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Uses stack / recursion</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Suitable for problems involving backtracking</span>
+                </div>
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="question has-answer" id="q3-4">
+            <div class="question-header">
+                <div class="question-number-container">
+                    <div class="question-number">
+                        <span class="number">15.</span>
+                        <span class="question-status">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </div>
+                    
+                </div>
+                <div class="question-actions">
+                    <button class="toggle-answer action-btn">
+                        <i class="fas fa-eye"></i> Show Answer
+                    </button>
+                    <button class="bookmark-btn action-btn" title="Bookmark question">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="question-body">
+                <div class="question-text">
+                    <div class="text-line">Write short note on :     b)Decision trees.</div>
+                </div>
+                <div class="answer-container">
+                    <div class="answer-header">
+                        <div class="answer-label">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Answer & Solution</span>
+                        </div>
+                        <div class="answer-actions">
+                            <button class="copy-answer" title="Copy answer">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="answer-content">
+                        <div class="answer-line">A Decision Tree is a tree-shaped model used to represent a sequence of decisions or comparisons for solving a problem. Each internal</div>
+<div class="answer-line">	 node represents a decision or test condition, each edge represents the outcome of the test, and each leaf node represents a final result or solution.</div>
+<div class="answer-line">	In algorithm analysis, decision trees are mainly used to obtain lower bounds for comparison-based algorithms such as sorting and searching.</div>
+<div class="answer-line">	Decision Tree for Algorithms</div>
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Each comparison made by the algorithm is modeled as a binary decision node (Yes/No).</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Each input leads to a path from the root to a leaf.</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">The height of the tree represents the minimum number of comparisons in the worst case.</span>
+                </div>
+                
+<div class="answer-line">	For comparison-based sorting of n elements:</div>
+<div class="answer-line">	Number of possible permutations = n!</div>
+<div class="answer-line">	A binary tree of height h can distinguish at most 2^h outcomes</div>
+<div class="answer-line">	Therefore,</div>
+<div class="answer-line">	2^h ≥ n!</div>
+<div class="answer-line">	⇒ h ≥ log₂(n!)</div>
+<div class="answer-line">	⇒ Worst-case lower bound = Ω(n log n)</div>
+<div class="answer-line">	So, no comparison-based sorting algorithm can perform better than n log n in the worst case.</div>
+<div class="answer-line">	Applications</div>
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Proving lower bounds of algorithms</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Designing optimal decision processes</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Machine learning classification models</span>
+                </div>
+                
+
+                <div class="text-line bullet">
+                    <span class="bullet-point">•</span>
+                    <span class="list-content">Game trees and strategy analysis</span>
+                </div>
+                
+<div class="answer-line">	Conclusion</div>
+<div class="answer-line">	Decision Trees provide a theoretical framework to analyze and prove limits on algorithm performance, especially for comparison-based problems. They show the minimum number</div>
+<div class="answer-line">	of decisions required to distinguish between all possible inputs.</div>
+<div class="answer-line bullet">--------------------------------------------------</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+</div>
+</section>
+            </main>
+            
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div class="brand-info">
+                            <span class="brand-name">Question Paper Converter Pro</span>
+                            <span class="version">v2.1.0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-info">
+                        <p class="generated-info">
+                            <i class="fas fa-clock"></i>
+                            Generated on December 31, 2025 at 09:03 PM
+                        </p>
+                        <p class="document-info">
+                            <i class="fas fa-file-alt"></i>
+                            3 parts • 15 questions • 77 total marks
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="footer-actions">
+                    <button class="footer-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                        <i class="fas fa-arrow-up"></i> Back to Top
+                    </button>
+                    <button class="footer-btn" onclick="window.print()">
+                        <i class="fas fa-download"></i> Save as PDF
+                    </button>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- Statistics Modal -->
+        <div id="stats-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3><i class="fas fa-chart-pie"></i> Document Statistics</h3>
+                    <button id="close-stats" class="close-btn">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h4 id="total-parts">0</h4>
+                                <p>Parts / Sections</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-question-circle"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h4 id="total-questions">0</h4>
+                                <p>Total Questions</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h4 id="questions-with-answers">0</h4>
+                                <p>With Answers</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-times-circle"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h4 id="questions-without-answers">0</h4>
+                                <p>Without Answers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+    <!-- Floating Action Button for Mobile -->
+    <div class="fab-container">
+        <button class="fab" id="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="fab-menu">
+            <button class="fab-action" id="fab-print" title="Print">
+                <i class="fas fa-print"></i>
+            </button>
+            <button class="fab-action" id="fab-expand" title="Expand All">
+                <i class="fas fa-expand"></i>
+            </button>
+            <button class="fab-action" id="fab-collapse" title="Collapse All">
+                <i class="fas fa-compress"></i>
+            </button>
+            <button class="fab-action" id="fab-theme" title="Change Theme">
+                <i class="fas fa-palette"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Mobile Theme Selector Modal -->
+    <div id="mobile-theme-modal" class="mobile-modal">
+        <div class="mobile-modal-content">
+            <div class="mobile-modal-header">
+                <h3><i class="fas fa-palette"></i> Select Theme</h3>
+                <button class="mobile-modal-close">&times;</button>
+            </div>
+            <div class="mobile-theme-grid">
+                <button class="mobile-theme-option" data-theme="elegant">
+                    <div class="theme-preview elegant"></div>
+                    <span>Elegant</span>
+                </button>
+                <button class="mobile-theme-option" data-theme="academic">
+                    <div class="theme-preview academic"></div>
+                    <span>Academic</span>
+                </button>
+                <button class="mobile-theme-option" data-theme="professional">
+                    <div class="theme-preview professional"></div>
+                    <span>Professional</span>
+                </button>
+                <button class="mobile-theme-option" data-theme="minimal">
+                    <div class="theme-preview minimal"></div>
+                    <span>Minimal</span>
+                </button>
+                <button class="mobile-theme-option" data-theme="dark">
+                    <div class="theme-preview dark"></div>
+                    <span>Dark</span>
+                </button>
+                <button class="mobile-theme-option" data-theme="print">
+                    <div class="theme-preview print"></div>
+                    <span>Print</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Enhanced JavaScript functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Toggle answers with smooth animation
+            document.querySelectorAll('.toggle-answer').forEach(button => {
+                button.addEventListener('click', function() {
+                    const question = this.closest('.question');
+                    const answer = question.querySelector('.answer-content');
+                    const icon = this.querySelector('i');
+                    
+                    if (answer.style.maxHeight === '0px' || answer.style.maxHeight === '') {
+                        // Expand answer
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        answer.style.opacity = '1';
+                        icon.className = 'fas fa-eye-slash';
+                        this.innerHTML = '<i class="fas fa-eye-slash"></i> Hide Answer';
+                        this.classList.add('active');
+                        
+                        // Add elegant effect
+                        answer.classList.add('answer-expanded');
+                    } else {
+                        // Collapse answer
+                        answer.style.maxHeight = '0';
+                        answer.style.opacity = '0';
+                        icon.className = 'fas fa-eye';
+                        this.innerHTML = '<i class="fas fa-eye"></i> Show Answer';
+                        this.classList.remove('active');
+                        
+                        // Remove effect
+                        answer.classList.remove('answer-expanded');
+                    }
+                });
+            });
+            
+            // Print functionality
+            const printBtn = document.getElementById('print-btn');
+            if (printBtn) {
+                printBtn.addEventListener('click', function() {
+                    // Add print class to body
+                    document.body.classList.add('print-mode');
+                    window.print();
+                    setTimeout(() => {
+                        document.body.classList.remove('print-mode');
+                    }, 1000);
+                });
+            }
+            
+            // Expand all answers
+            const expandAllBtn = document.getElementById('expand-all');
+            if (expandAllBtn) {
+                expandAllBtn.addEventListener('click', function() {
+                    document.querySelectorAll('.answer-content').forEach(answer => {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        answer.style.opacity = '1';
+                        answer.classList.add('answer-expanded');
+                    });
+                    document.querySelectorAll('.toggle-answer').forEach(btn => {
+                        btn.innerHTML = '<i class="fas fa-eye-slash"></i> Hide Answer';
+                        btn.classList.add('active');
+                    });
+                });
+            }
+            
+            // Collapse all answers
+            const collapseAllBtn = document.getElementById('collapse-all');
+            if (collapseAllBtn) {
+                collapseAllBtn.addEventListener('click', function() {
+                    document.querySelectorAll('.answer-content').forEach(answer => {
+                        answer.style.maxHeight = '0';
+                        answer.style.opacity = '0';
+                        answer.classList.remove('answer-expanded');
+                    });
+                    document.querySelectorAll('.toggle-answer').forEach(btn => {
+                        btn.innerHTML = '<i class="fas fa-eye"></i> Show Answer';
+                        btn.classList.remove('active');
+                    });
+                });
+            }
+            
+            // Theme switcher
+            const themeSwitcher = document.getElementById('theme-switcher');
+            if (themeSwitcher) {
+                themeSwitcher.addEventListener('change', function() {
+                    const theme = this.value;
+                    document.body.className = 'theme-' + theme;
+                    
+                    // Save theme preference
+                    localStorage.setItem('question-paper-theme', theme);
+                    
+                    // Update theme label
+                    const themeLabels = {
+                        'elegant': 'Elegant',
+                        'academic': 'Academic',
+                        'professional': 'Professional',
+                        'minimal': 'Minimal',
+                        'dark': 'Dark',
+                        'print': 'Print'
+                    };
+                    const currentThemeElement = document.getElementById('current-theme');
+                    if (currentThemeElement) {
+                        currentThemeElement.textContent = themeLabels[theme] || theme;
+                    }
+                });
+                
+                // Load saved theme
+                const savedTheme = localStorage.getItem('question-paper-theme') || 'elegant';
+                if (savedTheme && savedTheme !== 'elegant') {
+                    themeSwitcher.value = savedTheme;
+                    themeSwitcher.dispatchEvent(new Event('change'));
+                }
+            }
+            
+            // Smooth scroll for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Add hover effects to questions
+            document.querySelectorAll('.question').forEach(question => {
+                question.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-4px)';
+                    this.style.boxShadow = 'var(--shadow-lg)';
+                });
+                
+                question.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = 'var(--shadow)';
+                });
+            });
+            
+            // Statistics display
+            const statsBtn = document.getElementById('stats-btn');
+            if (statsBtn) {
+                statsBtn.addEventListener('click', function() {
+                    const statsModal = document.getElementById('stats-modal');
+                    if (statsModal) {
+                        statsModal.style.display = 'flex';
+                        
+                        // Calculate statistics
+                        const totalQuestions = document.querySelectorAll('.question').length;
+                        const totalParts = document.querySelectorAll('.part-section').length;
+                        const questionsWithAnswers = document.querySelectorAll('.question .answer-content').length;
+                        
+                        document.getElementById('total-questions').textContent = totalQuestions;
+                        document.getElementById('total-parts').textContent = totalParts;
+                        document.getElementById('questions-with-answers').textContent = questionsWithAnswers;
+                        document.getElementById('questions-without-answers').textContent = totalQuestions - questionsWithAnswers;
+                    }
+                });
+            }
+            
+            // Close modal
+            const closeStatsBtn = document.getElementById('close-stats');
+            if (closeStatsBtn) {
+                closeStatsBtn.addEventListener('click', function() {
+                    const statsModal = document.getElementById('stats-modal');
+                    if (statsModal) {
+                        statsModal.style.display = 'none';
+                    }
+                });
+            }
+            
+            // Click outside modal to close
+            window.addEventListener('click', function(event) {
+                const modal = document.getElementById('stats-modal');
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+            
+            // Initialize answer heights for animation
+            document.querySelectorAll('.answer-content').forEach(answer => {
+                answer.style.maxHeight = '0';
+                answer.style.opacity = '0';
+                answer.style.transition = 'max-height 0.5s ease, opacity 0.5s ease';
+            });
+            
+            // Mobile Floating Action Button
+            const fabToggle = document.getElementById('mobile-menu-toggle');
+            const fabMenu = document.querySelector('.fab-menu');
+            
+            if (fabToggle && fabMenu) {
+                fabToggle.addEventListener('click', function() {
+                    fabMenu.classList.toggle('show');
+                    this.classList.toggle('active');
+                });
+                
+                // Close FAB menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!fabToggle.contains(event.target) && !fabMenu.contains(event.target)) {
+                        fabMenu.classList.remove('show');
+                        fabToggle.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Mobile theme selector
+            const mobileThemeModal = document.getElementById('mobile-theme-modal');
+            const fabTheme = document.getElementById('fab-theme');
+            const mobileThemeClose = document.querySelector('.mobile-modal-close');
+            
+            if (fabTheme && mobileThemeModal) {
+                fabTheme.addEventListener('click', function() {
+                    mobileThemeModal.style.display = 'flex';
+                    if (fabMenu) fabMenu.classList.remove('show');
+                });
+            }
+            
+            if (mobileThemeClose) {
+                mobileThemeClose.addEventListener('click', function() {
+                    mobileThemeModal.style.display = 'none';
+                });
+            }
+            
+            // Mobile theme selection
+            document.querySelectorAll('.mobile-theme-option').forEach(option => {
+                option.addEventListener('click', function() {
+                    const theme = this.getAttribute('data-theme');
+                    document.body.className = 'theme-' + theme;
+                    localStorage.setItem('question-paper-theme', theme);
+                    mobileThemeModal.style.display = 'none';
+                    
+                    // Update desktop selector if exists
+                    if (themeSwitcher) {
+                        themeSwitcher.value = theme;
+                        themeSwitcher.dispatchEvent(new Event('change'));
+                    }
+                });
+            });
+            
+            // Mobile print button
+            const fabPrint = document.getElementById('fab-print');
+            if (fabPrint) {
+                fabPrint.addEventListener('click', function() {
+                    document.body.classList.add('print-mode');
+                    window.print();
+                    setTimeout(() => {
+                        document.body.classList.remove('print-mode');
+                    }, 1000);
+                });
+            }
+            
+            // Mobile expand all
+            const fabExpand = document.getElementById('fab-expand');
+            if (fabExpand) {
+                fabExpand.addEventListener('click', function() {
+                    document.querySelectorAll('.answer-content').forEach(answer => {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        answer.style.opacity = '1';
+                        answer.classList.add('answer-expanded');
+                    });
+                    document.querySelectorAll('.toggle-answer').forEach(btn => {
+                        btn.innerHTML = '<i class="fas fa-eye-slash"></i> Hide Answer';
+                        btn.classList.add('active');
+                    });
+                });
+            }
+            
+            // Mobile collapse all
+            const fabCollapse = document.getElementById('fab-collapse');
+            if (fabCollapse) {
+                fabCollapse.addEventListener('click', function() {
+                    document.querySelectorAll('.answer-content').forEach(answer => {
+                        answer.style.maxHeight = '0';
+                        answer.style.opacity = '0';
+                        answer.classList.remove('answer-expanded');
+                    });
+                    document.querySelectorAll('.toggle-answer').forEach(btn => {
+                        btn.innerHTML = '<i class="fas fa-eye"></i> Show Answer';
+                        btn.classList.remove('active');
+                    });
+                });
+            }
+            
+            // Handle mobile view adjustments
+            function handleMobileView() {
+                const isMobile = window.innerWidth < 768;
+                const desktopActions = document.querySelector('.header-actions .action-group');
+                const themeSelector = document.querySelector('.theme-selector');
+                
+                if (isMobile) {
+                    if (desktopActions) desktopActions.style.display = 'none';
+                    if (themeSelector) themeSelector.style.display = 'none';
+                } else {
+                    if (desktopActions) desktopActions.style.display = 'flex';
+                    if (themeSelector) themeSelector.style.display = 'flex';
+                }
+            }
+            
+            // Initial mobile view check
+            handleMobileView();
+            
+            // Update on resize
+            window.addEventListener('resize', handleMobileView);
+            
+            // Progress bar on scroll
+            window.addEventListener('scroll', function() {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                const progressBar = document.querySelector('.progress');
+                if (progressBar) {
+                    progressBar.style.width = scrolled + '%';
+                }
+            });
+            
+            // Copy answer functionality
+            document.querySelectorAll('.copy-answer').forEach(button => {
+                button.addEventListener('click', function() {
+                    const answer = this.closest('.answer-container').querySelector('.answer-content');
+                    const text = answer.innerText;
+                    
+                    navigator.clipboard.writeText(text).then(() => {
+                        // Show copied feedback
+                        const originalHTML = this.innerHTML;
+                        this.innerHTML = '<i class="fas fa-check"></i>';
+                        this.classList.add('copied');
+                        
+                        setTimeout(() => {
+                            this.innerHTML = originalHTML;
+                            this.classList.remove('copied');
+                        }, 2000);
+                    });
+                });
+            });
+            
+            // Bookmark functionality
+            document.querySelectorAll('.bookmark-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const question = this.closest('.question');
+                    const questionId = question.id;
+                    
+                    this.classList.toggle('bookmarked');
+                    const icon = this.querySelector('i');
+                    
+                    if (this.classList.contains('bookmarked')) {
+                        icon.className = 'fas fa-bookmark';
+                        localStorage.setItem('bookmark-' + questionId, 'true');
+                    } else {
+                        icon.className = 'far fa-bookmark';
+                        localStorage.removeItem('bookmark-' + questionId);
+                    }
+                });
+                
+                // Check saved bookmarks
+                const question = button.closest('.question');
+                const questionId = question.id;
+                if (localStorage.getItem('bookmark-' + questionId)) {
+                    button.classList.add('bookmarked');
+                    button.querySelector('i').className = 'fas fa-bookmark';
+                }
+            });
+            
+            // Handle keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                // Ctrl + P for print
+                if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                    e.preventDefault();
+                    if (printBtn) printBtn.click();
+                }
+                
+                // Escape to close modals
+                if (e.key === 'Escape') {
+                    const modals = document.querySelectorAll('.modal, .mobile-modal');
+                    modals.forEach(modal => {
+                        modal.style.display = 'none';
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
