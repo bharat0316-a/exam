@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Repository HTML Files</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            color: #f0f0f0;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+        
+        .repo-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .info-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .info-card i {
+            color: #00c6ff;
+            font-size: 1.2rem;
+        }
+        
+        .search-box {
+            max-width: 600px;
+            margin: 30px auto;
+            position: relative;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 15px 20px 15px 50px;
+            border-radius: 50px;
+            border: none;
+            background: rgba(255, 255, 255, 0.08);
+            color: white;
+            font-size: 1.1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .search-box input:focus {
+            outline: none;
+            border-color: #00c6ff;
+            box-shadow: 0 0 15px rgba(0, 198, 255, 0.3);
+            background: rgba(255, 255, 255, 0.12);
+        }
+        
+        .search-box i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #aaa;
+            font-size: 1.2rem;
+        }
+        
+        .file-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .file-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .file-card:hover {
+            transform: translateY(-5px);
+            border-color: #00c6ff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .file-icon {
+            font-size: 2.5rem;
+            color: #00c6ff;
+            margin-bottom: 15px;
+        }
+        
+        .file-name {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #fff;
+        }
+        
+        .file-path {
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+        
+        .open-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            text-align: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .open-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 114, 255, 0.4);
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #888;
+            font-size: 1.2rem;
+        }
+        
+        .empty-state i {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: #444;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        .file-count {
+            display: inline-block;
+            background: rgba(0, 198, 255, 0.2);
+            color: #00c6ff;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .file-list {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .repo-info {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-code"></i> Git Repository Explorer</h1>
+            <div class="subtitle">Browse and open HTML files from your repository</div>
+            
+            <div class="repo-info">
+                <div class="info-card">
+                    <i class="fab fa-git-alt"></i>
+                    <span>Repository: <strong>my-project</strong></span>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-code-branch"></i>
+                    <span>Branch: <strong>main</strong></span>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-file-code"></i>
+                    <span>HTML Files: <strong class="file-count">8</strong></span>
+                </div>
+            </div>
+        </header>
+        
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Search HTML files...">
+        </div>
+        
+        <div id="fileList" class="file-list">
+            <!-- HTML files will be dynamically loaded here -->
+        </div>
+        
+        <div id="emptyState" class="empty-state" style="display: none;">
+            <i class="far fa-folder-open"></i>
+            <h3>No HTML files found</h3>
+            <p>Try adjusting your search to find what you're looking for.</p>
+        </div>
+        
+        <footer>
+            <p>Git Repository HTML Explorer &copy; 2023 | Built with <i class="fas fa-heart" style="color: #ff4757;"></i> for developers</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Sample HTML files data - in a real scenario, this would come from your server/API
+        const htmlFiles = [
+            { name: "Home Page", path: "index.html", url: "index.html" },
+            { name: "DAA PAPER 1", path: "DAA_PAPER_1.html", url: "DAA_PAPER_1.html" },
+            { name: "DAA PAPER 2", path: "DAA_PAPER_2.html", url: "DAA_PAPER_2.html" }
+        ];
+        
+        // Function to render HTML files
+        function renderFiles(files) {
+            const fileListElement = document.getElementById('fileList');
+            const emptyStateElement = document.getElementById('emptyState');
+            const fileCountElement = document.querySelector('.file-count');
+            
+            // Clear current list
+            fileListElement.innerHTML = '';
+            
+            // Update file count
+            fileCountElement.textContent = files.length;
+            
+            // If no files, show empty state
+            if (files.length === 0) {
+                emptyStateElement.style.display = 'block';
+                return;
+            }
+            
+            // Hide empty state
+            emptyStateElement.style.display = 'none';
+            
+            // Create file cards
+            files.forEach(file => {
+                const fileCard = document.createElement('div');
+                fileCard.className = 'file-card';
+                fileCard.innerHTML = `
+                    <div class="file-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <div class="file-name">${file.name}</div>
+                    <div class="file-path">${file.path}</div>
+                    <a href="${file.url}" target="_blank" class="open-btn">
+                        <i class="fas fa-external-link-alt"></i> Open File
+                    </a>
+                `;
+                
+                fileListElement.appendChild(fileCard);
+            });
+        }
+        
+        // Function to filter files based on search
+        function filterFiles(searchTerm) {
+            if (!searchTerm.trim()) {
+                return htmlFiles;
+            }
+            
+            const term = searchTerm.toLowerCase();
+            return htmlFiles.filter(file => 
+                file.name.toLowerCase().includes(term) || 
+                file.path.toLowerCase().includes(term)
+            );
+        }
+        
+        // Initialize the page with all files
+        document.addEventListener('DOMContentLoaded', function() {
+            renderFiles(htmlFiles);
+            
+            // Add search functionality
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', function() {
+                const filteredFiles = filterFiles(this.value);
+                renderFiles(filteredFiles);
+            });
+            
+            // Add some interactive effects
+            const fileCards = document.querySelectorAll('.file-card');
+            fileCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+        
+        // For demonstration: simulate loading files from a git repository
+        // In a real implementation, you would fetch this data from your server
+        console.log("Loaded HTML files from repository:", htmlFiles);
+    </script>
+</body>
+</html>
